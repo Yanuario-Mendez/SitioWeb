@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Médicos y Servicios</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="titulo-medicos-servicios">
+        <h1>Médicos y Servicios</h1>
+        {% for medico in medicos %}
+            <p>Nombre: {{ medico.nombre }}</p>
+            <p>Especialidad: {{ medico.especialidad }}</p>
+        {% empty %}
+            <p>No hay médicos disponibles en este momento.</p>
+        {% endfor %}
+    </div>
+
+    <!-- Contenedor para las imágenes -->
+    <div class="medicos-imagenes">
+        <img src="{% static 'imagen21.jpg' %}" alt="Imagen médico" class="medico-imagen">
+        <img src="{% static 'imagen22.jpg' %}" alt="Imagen médico" class="medico-imagen">
+        <img src="{% static 'imagen23.jpg' %}" alt="Imagen médico" class="medico-imagen">
+        <img src="{% static 'imagen24.jpg' %}" alt="Imagen médico" class="medico-imagen">
+    </div>
+</body>
+</html>

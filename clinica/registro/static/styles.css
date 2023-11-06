@@ -1,0 +1,200 @@
+ body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('/static/imagen10.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.background-full {
+    position: relative;
+    background-image: url('/static/imagen8.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 1000px;
+    height: 70px;
+    background: #333333;
+    border-radius: 75px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 0 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin: 0 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    background-color: #884EA0;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3069f0;
+}
+
+.main-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Añadido para asegurar que el contenido principal se muestre debajo de la barra de navegación */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ajuste del margen superior de la sección historia-clinica */
+.historia-clinica {
+    padding: 80px; /* Aumento del espacio interior */
+    margin: 100px auto; /* Mantenemos el margen superior e inferior y centramos horizontalmente */
+    background-image: url('/static/imagen13.jpg'); /* Usar la misma imagen de fondo que el menú */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente sobre la imagen para mejorar la legibilidad */
+    width: calc(100% - 1000px); /* el ancho total incluyendo el padding y el borde no sobrepase el 100% */
+    box-sizing: border-box; /* Esto asegura que el padding y el borde se incluyan en el ancho total */
+    max-width: 1250px; /*  para establecer un ancho máximo si es necesario */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); /*  sombra para mejorar la legibilidad del texto */
+}
+/* Estilos para el contenedor del formulario */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px auto; /* Añade un margen superior para despegarlo de la pestaña */
+    padding: 100px;
+    border: 1px solid #000000; /* Añade un borde al recuadro */
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: sombra para el recuadro */
+    background: rgba(255, 255, 255, 0.9); /* Añade un fondo blanco con transparencia para el formulario */
+    box-sizing: border-box;
+}
+
+.titulo-medicos-servicios {
+    text-align: center; /* Centrar el texto dentro del recuadro */
+    margin: 100px auto; /* Aumenta el margen superior e inferior, y centra horizontalmente */
+    padding: 20px; /* Añade un poco de espacio alrededor del texto */
+    border: 1px solid #000000; /* Añade un borde al recuadro */
+    max-width: 60%; /* Ajusta al ancho que prefieras */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*  sombra para el recuadro */
+    background: #ffffff; /* Fondo blanco para el recuadro */
+    background: rgba(255, 255, 255, 0.7); /* Reduce la opacidad para hacer el fondo más transparente */
+    box-sizing: border-box;
+}
+
+/* Estilos adicionales para .contacto-container */
+
+.contacto-container {
+    text-align: center; /* Centrar el texto dentro del recuadro */
+    margin: 100px auto 50px; /* Aumenta el margen superior a 100px y mantiene 50px en la parte inferior */
+    padding: 20px; /* Añade un poco de espacio alrededor del contenido */
+    border: 1px solid #000000; /* Añade un borde al recuadro */
+    max-width: 60%; /* Ajusta al ancho  */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: sombra para el recuadro */
+    background: #ffffff; /* Fondo blanco para el recuadro */
+    box-sizing: border-box;
+}
+
+/* Estilos para el contenedor de las imágenes en Médicos y Servicios */
+.medicos-imagenes {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px; /*  para separar el recuadro de arriba */
+}
+
+/* Estilos para las imágenes individuales en Médicos y Servicios */
+.medico-imagen {
+    width: 150px; /* O el tamaño que prefieras */
+    margin: 0 10px; /* Espacio entre las imágenes */
+    vertical-align: middle; /* Alinea verticalmente  */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Sombra opcional para las imágenes */
+    border-radius: 10px; /* bordes redondeados */
+}
+
+/* Aplica la imagen de fondo específica solo al body de la página de contacto */
+.contacto-fondo {
+    background-image: url('/static/imagen1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contacto-container {
+    /* ... estilos existentes ... */
+    background: rgba(255, 255, 255, 0.7); /* Ajusta la opacidad  */
+}
+
+.confirmacion-cita {
+    text-align: center;
+    padding: 20px;
+    margin: 50px auto; /* margen arriba y abajo para separarlo de otros elementos */
+    border: 1px solid #ccc; /* Borde sutil */
+    max-width: 600px; /* O el ancho máximo  */
+    background: #ffffff; /* Fondo blanco para el recuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+    border-radius: 10px; /* Bordes redondeados para un look más suave */
+    position: relative; /* Para posicionar elementos absolutos dentro  */
+    z-index: 2;
+}
+
+.confirmacion-cita h2 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #333; /* Color oscuro para el texto */
+}
+
+.confirmacion-cita ul {
+    list-style: none; /* Elimina los estilos de lista */
+    padding: 0; /* Elimina el padding por defecto */
+    text-align: left; /* Alineación del texto a la izquierda */
+    display: inline-block; /* Para que el bloque se centre horizontalmente */
+    margin-left: 0; /*  lista esté alineada a la izquierda */
+}
+
+.confirmacion-cita li {
+    padding-left: 1em; /* Espacio para los pseudo-elementos o íconos si se desea añadir */
+    text-indent: -1em; /* Ajusta la indentación del texto */
+    margin-bottom: 10px; /* Espacio entre los ítems de la lista */
+}
+
+
+
+
+
+
